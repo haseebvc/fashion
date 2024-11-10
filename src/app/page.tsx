@@ -1,101 +1,99 @@
-import Image from "next/image";
+// pages/index.js
+
+import Head from 'next/head';
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-gray-50">
+      <Head>
+        <title className= "text-black "> Fashion Hub - Clothing Sale & Marketing</title>
+        <meta name="description" content="Shop the latest fashion trends at Fashion Hub. Find stylish outfits
+         and accessories on sale." />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Header Section */}
+      <header className=" shadow-md sticky top-0 z-50">
+        <div className="container mx-auto flex justify-between items-center py-4 px-6">
+          <div className="text-2xl font-bold text-gray-800">Fashion Hub</div>
+          <nav className="flex space-x-6">
+            <a href="#" className="text-gray-600 hover:text-gray-800">Home</a>
+            <a href="shop" className="text-gray-600 hover:text-gray-800">Shop</a>
+            <a href="#" className="text-gray-600 hover:text-gray-800">New Arrivals</a>
+            <a href="#" className="text-gray-600 hover:text-gray-800">Sale</a>
+            <a href="#" className="text-gray-600 hover:text-gray-800">Contact</a>
+          </nav>
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Sign In</button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-[url('/images/hero-bg.jpg')] bg-cover bg-center h-[600px] flex items-center">
+        <div className="container mx-auto text-center text-white">
+          <h1 className=" text-black text-2xl font-bold black color "> haseeb vc wala is owner this webpage</h1>
+          <h1 className="  text-black text-2xl font-bold black color mb-4">Discover the Latest Fashion Trends</h1>
+          <p className="text-black text-xl mb-8">Shop our exclusive collection of clothing and accessories on sale now.</p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-500 transition">Shop Now</button>
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="container mx-auto py-16 px-6">
+        <h2 className="text-4xl font-bold text-center mb-12">Featured Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {/* Product Card */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="/images/product1.jpg" alt="Product 1" className="w-full h-64 object-cover" />
+            <div className="p-4">
+              <h3 className="text-lg font-bold mb-2">Stylish Jacket</h3>
+              <p className="text-gray-600 mb-4">pkr 5000</p>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Add to Cart</button>
+            </div>
+          </div>
+
+          {/* Repeat Product Cards for Other Items */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="/images/product2.jpg" alt="Product 2" className="w-full h-64 object-cover" />
+            <div className="p-4">
+              <h3 className="text-lg font-bold mb-2">Casual T-Shirt</h3>
+              <p className="text-gray-600 mb-4">pkr 3000</p>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Add to Cart</button>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="/images/product3.jpg" alt="Product 3" className="w-full h-64 object-cover" />
+            <div className="p-4">
+              <h3 className="text-lg font-bold mb-2">Elegant Dress</h3>
+              <p className="text-gray-600 mb-4">pkr 7000</p>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Add to Cart</button>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="/images/product4.jpg" alt="Product 4" className="w-full h-64 object-cover" />
+            <div className="p-4">
+              <h3 className="text-lg font-bold mb-2">Trendy Sneakers</h3>
+              <p className="text-gray-600 mb-4">pkr 9000</p>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="container mx-auto text-center">
+          <p className="mb-4">© 2024 Fashion Hub. All Rights Reserved.</p>
+          <div className="flex justify-center space-x-4">
+            <a href="https://www.facebook.com/usama.don.9822" className="text-white hover:text-gray-400">Facebook</a>
+            <a href="https://www.instagram.com/haseeb_vc_wala/" className="text-white hover:text-gray-400">Instagram</a>
+            <a href="/home" className="text-white hover:text-gray-400">ceated by haseeb vc wala </a>
+            <a href="https://github.com/haseebvc" className="text-white hover:text-gray-400">  gitHub</a>
+          </div>
+        </div>
       </footer>
     </div>
   );
 }
+
